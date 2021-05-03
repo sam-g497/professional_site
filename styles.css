@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@media (max-width: 3000px) {
+  main, .main1 {
+    flex-direction: column;
+  }
+}
+
+.logo{/* Ormskirk News */
+position: absolute;
+width: 340px;
+height: 85px;
+left: 20px;
+top: 42px;
+background: #ffffff;
+}
+body{
+  background-image: url("./images/background1.jpg");
+  font-family: sans-serif;
+  align-content: center;
+}
+header{
+  background-color: #262f56;
+  color:#ffffff
+}
+
+.button {
+  color: white;
+  position: relative;
+  background-color: black;
+  height: 60px;
+  width: 200px;
+  border: none;
+  background-color: #262f56;
+  margin: 1rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+/** this sets the look of the button for when the cursor is over it, it sets
+the position as well and the background color, it gives the transform origin
+which is where the transistion starts**/
+.button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #262f56;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: translateX(-20rem);
+  transition: transform 0.5s;
+}
+/** sets the color of the text to white when cursor hovers, cursor also changed
+to pointer and background made transparent**/
+.button:hover {
+  color: black;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.button:hover:before {
+  transform: translateX(0px);
+}
+header{
+  position: inherit;
+}
+main{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
