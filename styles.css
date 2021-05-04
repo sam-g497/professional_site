@@ -76,3 +76,9 @@ main{
   padding-left: 50px;
   padding-right: 50px;
 }
+.me{
+  align-self: flex-end;
+}
+h2{
+  font-size: 70px;
+}
